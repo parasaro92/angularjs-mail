@@ -1,1 +1,14 @@
-inbox.html 
+
+<div class="module inbox-view">
+  <div class="module__title">
+    <h1>{{ meta.title }}</h1>
+  </div>
+  <pre>{{ data.emails | json }}</pre>
+</div>
+
+<!-- JavaScript inside expression -->
+<h1>{{ [ firstName, lastName ].join(" ") }}</h1>
+<!-- currency filter applied to a multiplication of 2 numbers -->
+<div class="total-info">{{ cost * quantity | currency }}</div>
+<!-- Using a ternary expression inside the expression -->
+<div class="budget">{{ ( total > budget ) ? "Too Expensive" : "You can buy it!" }}</div>
